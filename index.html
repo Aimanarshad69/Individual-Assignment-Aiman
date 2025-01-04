@@ -55,46 +55,49 @@
         </div>
     </div>
 
-    <!-- Footer -->
-    <footer class="footer mt-auto py-3 bg-body-tertiary" style="position: fixed; bottom: 0; width: 100%; text-align: center;">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <div class="title_footer">Uitm Student e-profile</div>
-                    <p>
-                        <strong>CONTACT US:</strong><br>
-                        Universiti Teknologi MARA (UiTM)<br>
-                        40450 Shah Alam, Selangor Darul Ehsan, Malaysia<br><br>
-                        <strong>Tel:</strong> +603-5544 2000
-                    </p>
-                    <p>© COPYRIGHT UNIVERSITI TEKNOLOGI MARA 2020</p>
-                </div>
-            </div>
-        </div>
-    </footer>
+   <!-- Footer -->
+   <footer class="footer py-3">
+    <div class="container">
+        <div class="title_footer fw-bold">UiTM Student e-Profile</div>
+        <p>
+            <strong>CONTACT US:</strong><br>
+            Universiti Teknologi MARA (UiTM), 40450 Shah Alam, Selangor Darul Ehsan, Malaysia<br>
+            <strong>Tel:</strong> +603-5544 2000
+        </p>
+        <p>© COPYRIGHT UNIVERSITI TEKNOLOGI MARA 2020</p>
+    </div>
+</footer>
 
-   <!-- Bootstrap JS CDN -->
-   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+<!-- Bootstrap JS and dependencies -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0wO8FqIu+1m3o16tFfZt/lhrZErz7kFgRV/tmHjA6+TkSAo8" crossorigin="anonymous"></script>
 
-   <!-- JavaScript for Form Submit and Redirection -->
-   <script>
-       document.getElementById('loginForm').addEventListener('submit', function(event) {
-           event.preventDefault();  // Prevent the form from submitting the traditional way
+<!-- Dark Mode Script -->
+<script>
+    function setTheme(theme) {
+        document.documentElement.setAttribute("data-bs-theme", theme);
+        localStorage.setItem("theme", theme);
+        document.getElementById("themelabel").innerText =
+            theme === "dark" ? "Dark Mode On" : "Dark Mode Off";
+    }
 
-           // Get values from input fields
-           const email = document.getElementById('emailAddress').value;
-           const password = document.getElementById('password').value;
+    document.getElementById("darkModeToggle").addEventListener("change", function (event) {
+        if (event.target.checked) {
+            setTheme("dark");
+        } else {
+            setTheme("");
+        }
+    });
 
-           // Add validation here if needed
-           if (email && password) {
-               // If both email and password are entered, redirect to dashboard
-               window.location.href = 'home.html';  // Redirect to the dashboard page
-           } else {
-               // Show an alert if fields are not filled
-               alert('Please enter both email and password');
-           }
-       });
-   </script>
+    window.onload = function () {
+        let savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            setTheme(savedTheme);
+            if (savedTheme === "dark") {
+                document.getElementById("darkModeToggle").checked = true;
+            }
+        }
+    };
+</script>
 
 </body>
 </html>
