@@ -1,0 +1,12 @@
+.title {
+    font-family: "Monomaniac One", serif;
+    font-weight: 700;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: transparent;
+    background: linear-gradient(135deg, #1e5799, #2ce0bf, #7ddd2c);
+    background-size: 500px 100%;
+    -webkit-background-clip: text; /* Required for cross-browser support */
+    background-clip: text;
+}
+  

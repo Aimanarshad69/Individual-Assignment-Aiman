@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<!-- saved from url=(0037)http://localhost/bookstrap/index.html -->
+<html lang="en"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Uitm Student e-profile</title>
+    <!-- Bootstrap CSS CDN -->
+    <link href="./Uitm Student e-profile_files/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./Uitm Student e-profile_files/css2" rel="stylesheet">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="./Uitm Student e-profile_files/style.css">
+</head>
+<body> 
+
+    <!-- Header -->
+    <div class="container my-4">
+        <div class="title">Uitm Student e-profile</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container">
+            <img src="./Uitm Student e-profile_files/UiTM_Universiti_Teknologi_MARA_logo.png" alt="Uitm Logo" width="100px">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="http://localhost/bookstrap/index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost/bookstrap/profile.html">Profile</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost/bookstrap/first%20profile.html">Yaqeen</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost/bookstrap/student2_profile.html">Hanni</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost/bookstrap/student3_profile.html">Katherine</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost/bookstrap/student4_profile.html">Harry Kane</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="http://localhost/bookstrap/student5_profile.html">Park Seojoon</a>
+                    </li>
+                </ul>
+                <div class="form-check form-switch">
+                    <input class="form-check-input" type="checkbox" id="darkModeToggle">
+                    <label class="form-check-label" for="darkModeToggle" id="themelabel">Dark Mode</label>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Content -->
+    <div class="container-fluid bg-body-tertiary">
+        <div class="container">
+            <div class="row py-5">
+                <div class="col-md-2 text-center">
+                    <img src="./Uitm Student e-profile_files/uitm_logo.webp" alt="UiTM" width="150px">
+                </div>
+                <div class="col-md-10">
+                  <p class="justify" style="font-size: 2em; font-weight: bold; color: #8e08a0;">UNIVERSITI TEKNOLOGI MARA</p>
+                    <h5>OUR VISION:</h5>
+                    <p>To establish UiTM as a world-renowned university in the fields of Science, Technology, Humanities, and Entrepreneurship.</p>
+                    <h5>OUR MISSION:</h5>
+                    <p>To champion the development of agile Bumiputera professionals through cutting-edge curricula and impactful research.</p>
+                    <h5>UNLEASHING POTENTIAL, SHAPING THE FUTURE</h5>
+                </div>
+            </div>
+ </div>
+    </div>
+
+<!-- Footer -->
+<footer class="footer nt-auto py-3 bg-body-tertiary">
+    <div class="container">
+        <div class="row">
+            <div class="title_footer">Uitm Student e-profile</div>
+            <p class="justify">CONTACT US: 
+                Universiti Teknologi MARA (UiTM)
+                40450 Shah Alam, Selangor Darul Ehsan
+                Malaysia
+                
+                Tel: +603-5544 2000
+            </p>
+            <div class="col-md-4">
+                © COPYRIGHT UNIVERSITI TEKNOLOGI MARA 2020.
+            </div>
+        </div>
+    </div>
+</footer>
+
+<!-- Bootstrap JS CDN -->
+<script src="./Uitm Student e-profile_files/bootstrap.bundle.min.js.download" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+
+<!-- Dark Mode Script -->
+<script>
+    function setTheme(theme) {
+        document.documentElement.setAttribute("data-bs-theme", theme);
+        localStorage.setItem("theme", theme);
+        document.getElementById("themelabel").innerText =
+            theme === "dark" ? "Dark Mode On" : "Dark Mode Off";
+    }
+
+    document.getElementById("darkModeToggle").addEventListener("change", function (event) {
+        if (event.target.checked) {
+            setTheme("dark");
+        } else {
+            setTheme("");
+        }
+    });
+
+    window.onload = function () { 
+        let savedTheme = localStorage.getItem("theme");
+        if (savedTheme) {
+            setTheme(savedTheme);
+            if (savedTheme === "dark") {
+                document.getElementById("darkModeToggle").checked = true;
+            }
+        }
+    };
+</script>
+
+
+
+</body></html>

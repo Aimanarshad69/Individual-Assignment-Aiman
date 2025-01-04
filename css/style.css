@@ -1,0 +1,137 @@
+
+.title {
+    font-family: "Monomaniac One", serif;
+    font-weight: 700;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: transparent;
+    background: linear-gradient(135deg, #1e5799, #2ce0bf, #7ddd2c);
+    background-size: 500px 100%;
+    -webkit-background-clip: text; /* Required for cross-browser support */
+    background-clip: text;
+}
+  
+.body{
+    font-family: 'poppin', sans-serif;
+    background: #ececec;
+
+}
+
+/.custom-bg {
+    background-image: url('img/2019_uitm_04.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+}
+
+/* Card-like section with scaling */
+.custom-card {
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 10px;
+    padding: 20px; /* Reduced padding by 20% */
+    transform: scale(0.8); /* Scale down the content by 20% */
+}
+
+/* Title styling */
+.custom-title {
+    font-weight: bold;
+    font-size: 1.92em; /* Reduced font size by 20% */
+    color: #8e08a0;
+}
+
+/* Text paragraph styling */
+.custom-text {
+    font-size: 0.96em; /* Reduced font size by 20% */
+}
+
+.title_footer {
+    font-family: "Monomaniac One", sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    text-transform: uppercase;
+    color: transparent;
+    background: linear-gradient(135deg, #1e5799, #2ce0bf, #7ddd2c);
+    background-size: 500px 100%;
+    background-clip: text; /* This may not work in all browsers */
+    -webkit-background-clip: text; /* For Safari */
+  }
+  
+  /* Body Styles */
+  body {
+    font-family: Arial, sans-serif;
+    text-align: center; 
+    margin: 20px;
+    background-image: url('img/background.png'); /* Corrected path to your background image */
+    background-size: cover; /* Cover the entire viewport */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+  }
+  
+  /* Image Styles */
+  img {
+    border: 2px solid #ccc; 
+    border-radius: 8px; 
+    transition: transform 0.2s; /* Smooth transition for hover effect */
+  }
+  
+  img:hover {
+    transform: scale(1.05); /* Slightly enlarge the image on hover */
+  }
+  
+  /* Card Image Styles */
+  .card-img-top {
+    width: 80%; /* Adjust this value to make the image smaller or larger */
+    height: auto; /* Maintain aspect ratio */
+    margin: 0 auto; /* Center the image */
+  }
+  
+  /* Background Color Classes */
+  .blue {
+    background-color: rgb(30, 87, 153);
+  }
+  
+  .green {
+    background-color: rgb(9, 142, 55);
+  }
+  
+  /* Transparent Card Background */
+  .card_transparent {
+    background-color: rgba(255, 255, 255, 0.2); /* Use rgba for transparency */
+  }
+  
+  /* Justify Text */
+  .justify {
+    text-align: justify;
+
+  }
+  
+  /* Box Styles */
+  .box_large {
+    width: 55px;
+    height: 55px;
+    margin-bottom: 8px;
+    margin-right: 8
+  }
+
+  .background-container {
+    background-image: url('maxresdefault.jpg');
+    background-size: cover; /* Cover the entire div */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image repetition */
+    padding: 50px;
+    color: white;
+}
+
+.profile-headings {
+    font-family: "Poppins", serif;
+    font-weight: 200;
+    font-style: normal;
+  }
+  
+.card-body {
+    font-family: "Monomaniac One", serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
