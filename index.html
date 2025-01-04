@@ -15,7 +15,6 @@
 
     <!-- Custom Styles -->
     <link rel="stylesheet" href="css/style.css">
-
 </head>
 <body>
 
@@ -55,51 +54,42 @@
         </div>
     </div>
 
-   <!-- Footer -->
-   <footer class="footer py-3">
-    <div class="container">
-        <div class="title_footer fw-bold">UiTM Student e-Profile</div>
-        <p>
-            <strong>CONTACT US:</strong><br>
-            Universiti Teknologi MARA (UiTM), 40450 Shah Alam, Selangor Darul Ehsan, Malaysia<br>
-            <strong>Tel:</strong> +603-5544 2000
-        </p>
-        <p>© COPYRIGHT UNIVERSITI TEKNOLOGI MARA 2020</p>
-    </div>
-</footer>
+    <!-- Footer -->
+    <footer class="footer py-3">
+        <div class="container">
+            <div class="title_footer fw-bold">UiTM Student e-Profile</div>
+            <p>
+                <strong>CONTACT US:</strong><br>
+                Universiti Teknologi MARA (UiTM), 40450 Shah Alam, Selangor Darul Ehsan, Malaysia<br>
+                <strong>Tel:</strong> +603-5544 2000
+            </p>
+            <p>© COPYRIGHT UNIVERSITI TEKNOLOGI MARA 2020</p>
+        </div>
+    </footer>
 
-<!-- Bootstrap JS and dependencies -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0wO8FqIu+1m3o16tFfZt/lhrZErz7kFgRV/tmHjA6+TkSAo8" crossorigin="anonymous"></script>
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-pzjw8f+ua7Kw1TIq0wO8FqIu+1m3o16tFfZt/lhrZErz7kFgRV/tmHjA6+TkSAo8" crossorigin="anonymous"></script>
 
-<!-- Dark Mode Script -->
-<script>
-    function setTheme(theme) {
-        document.documentElement.setAttribute("data-bs-theme", theme);
-        localStorage.setItem("theme", theme);
-        document.getElementById("themelabel").innerText =
-            theme === "dark" ? "Dark Mode On" : "Dark Mode Off";
-    }
+    <!-- Login Script -->
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Prevent form's default submission behavior
 
-    document.getElementById("darkModeToggle").addEventListener("change", function (event) {
-        if (event.target.checked) {
-            setTheme("dark");
-        } else {
-            setTheme("");
-        }
-    });
+            // Example of simple validation
+            const email = document.getElementById('emailAddress').value;
+            const password = document.getElementById('password').value;
 
-    window.onload = function () {
-        let savedTheme = localStorage.getItem("theme");
-        if (savedTheme) {
-            setTheme(savedTheme);
-            if (savedTheme === "dark") {
-                document.getElementById("darkModeToggle").checked = true;
+            // Replace with actual validation logic as needed
+            if (email === "student@uitm.edu.my" && password === "password123") {
+                alert("Login successful!");
+                window.location.href = "home.html"; // Redirect to another page
+            } else {
+                alert("Invalid email or password. Please try again.");
             }
-        }
-    };
-</script>
-
+        });
+    </script>
 </body>
 </html>
+
 
 
